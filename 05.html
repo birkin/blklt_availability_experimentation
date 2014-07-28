@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <!-- Mobile viewport optimization h5bp.com/ad -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+    <!--[if IEMobile]>
+      <meta http-equiv="cleartype" content="on">
+    <![endif]-->
+
+    <title>Zen and the art of motorcycle maintenance: an inquiry into values - Blacklight</title>
+    <link href="http://dblightcit.services.brown.edu/find/catalog/opensearch.xml" rel="search" title="Blacklight" type="application/opensearchdescription+xml" />
+    <link href="/find/assets/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    <link href="/find/assets/font-awesome.css?body=1" media="screen" rel="stylesheet" />
+<link href="/find/assets/application.css?body=1" media="screen" rel="stylesheet" />
+<link href="/find/assets/blacklight.css?body=1" media="screen" rel="stylesheet" />
+<link href="/find/assets/easy.css?body=1" media="screen" rel="stylesheet" />
+    <script src="/find/assets/jquery.js?body=1"></script>
+<script src="/find/assets/jquery_ujs.js?body=1"></script>
+<script src="/find/assets/turbolinks.js?body=1"></script>
+<script src="/find/assets/blacklight/core.js?body=1"></script>
+<script src="/find/assets/blacklight/autofocus.js?body=1"></script>
+<script src="/find/assets/blacklight/checkbox_submit.js?body=1"></script>
+<script src="/find/assets/blacklight/bookmark_toggle.js?body=1"></script>
+<script src="/find/assets/blacklight/ajax_modal.js?body=1"></script>
+<script src="/find/assets/blacklight/search_context.js?body=1"></script>
+<script src="/find/assets/blacklight/collapsable.js?body=1"></script>
+<script src="/find/assets/bootstrap/transition.js?body=1"></script>
+<script src="/find/assets/bootstrap/collapse.js?body=1"></script>
+<script src="/find/assets/bootstrap/dropdown.js?body=1"></script>
+<script src="/find/assets/bootstrap/alert.js?body=1"></script>
+<script src="/find/assets/bootstrap/modal.js?body=1"></script>
+<script src="/find/assets/blacklight/blacklight.js?body=1"></script>
+<script src="/find/assets/easy.js?body=1"></script>
+<script src="/find/assets/underscore-min.js?body=1"></script>
+<script src="/find/assets/application.js?body=1"></script>
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="dft5Bs//pALDUZMbUgnUcqBAcjisLWM/GWBJjd9IEQA=" name="csrf-token" />
+    <link href="http://dblightcit.services.brown.edu/find/catalog/b1815113.xml" rel="alternate" title="xml" type="application/xml" />
+<link href="http://dblightcit.services.brown.edu/find/catalog/b1815113.dc_xml" rel="alternate" title="dc_xml" type="text/xml" />
+<link href="http://dblightcit.services.brown.edu/find/catalog/b1815113.oai_dc_xml" rel="alternate" title="oai_dc_xml" type="text/xml" />
+
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+
+  <script type="text/javascript" src="./jquery-1.10.2.min.js"></script>
+
+  <script type="text/javascript">
+
+    $(document).ready(
+      function(){
+        var api_url = "http://library.brown.edu/services/availability/isbn/0688002307/?callback=?";
+        $.getJSON( api_url, addStatus );
+      }
+    );
+
+    function addStatus( json_output ) {
+      var availability = checkAvailability( json_output );
+      $("#title_span").append( availability );
+    }
+
+    function checkAvailability( json_output ) {
+      var items = json_output.items;
+      alert( JSON.stringify(items) );
+      var return_val = "UNAVAILABLE";
+      items.forEach(
+        function(item){
+          if ( item.availability == "AVAILABLE" ) {
+            return_val = "AVAILABLE";
+          }
+        }
+      )
+      return "::: " + return_val + " :::";
+    }
+
+  </script>
+
+
+
+  </head>
+  <body class="blacklight-catalog blacklight-catalog-show">
+  <div id="header-navbar" class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#user-util-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/find/">Blacklight</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="user-util-collapse">
+      <div class="navbar-right">
+  <ul class="nav navbar-nav">
+    <li>
+      <a href="/find/bookmarks">Bookmarks</a>
+    </li>
+    <li>
+    <a href="/find/search_history">History</a>
+    </li>
+  </ul>
+
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="/find/users/sign_in">Login</a>
+      </li>
+      </ul>
+</div>
+    </div>
+  </div>
+</div>
+
+<div id="search-navbar" class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container">
+      <form accept-charset="UTF-8" action="http://dblightcit.services.brown.edu/find/" class="search-query-form form-inline clearfix navbar-form" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+
+
+    <div class="input-group col-md-9 col-md-offset-1">
+
+      <span class="input-group-addon">
+        <label for="search_field" class="sr-only">Search in</label>
+        <select class="search_field" id="search_field" name="search_field" title="Targeted search options"><option value="all_fields">All Fields</option>
+<option value="title">Title</option>
+<option value="author">Author</option>
+<option value="subject">Subject</option></select>
+        <span class="sr-only">for</span>
+        </span>
+        <label for="q" class="sr-only">Search...</label>
+         <input class="search_q q form-control" id="q" name="q" placeholder="Search..." type="text" />
+
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary search-btn" id="search">
+          <span class="submit-search-text">Search</span>
+          <span class="glyphicon glyphicon-search"></span>
+        </button>
+        </span>
+      </div>
+</form>
+  </div>
+</div>
+
+
+  <div id="ajax-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal menu" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>
+
+
+  <div id="main-container" class="container">
+    <div class="row">
+  <div class="col-md-12">
+    <div id="main-flashes">
+      <div class="flash_messages">
+</div>
+
+    </div>
+  </div>
+</div>
+
+
+    <div class="row">
+      <div id="content" class="col-md-9 show-document">
+
+
+
+
+
+<div id="document" class="document " itemscope  itemtype="http://schema.org/Thing">
+  <div id="doc_b1815113">
+
+    <h1 itemprop="name">Zen and the art of motorcycle maintenance: an inquiry into values</h1>
+<dl class="dl-horizontal  dl-invert">
+	    <dt class="blacklight-title_display">Title:</dt>
+	    <dd class="blacklight-title_display">Zen and the art of motorcycle maintenance: an inquiry into values <span id="title_span"></span></dd>
+	    <dt class="blacklight-author_display">Author:</dt>
+	    <dd class="blacklight-author_display">Pirsig, Robert M.</dd>
+	    <dt class="blacklight-format">Format:</dt>
+	    <dd class="blacklight-format">Book</dd>
+	    <dt class="blacklight-language_facet">Language:</dt>
+	    <dd class="blacklight-language_facet">English</dd>
+	    <dt class="blacklight-published_display">Published:</dt>
+	    <dd class="blacklight-published_display">New York</dd>
+	    <dt class="blacklight-lc_callnum_display">Call number:</dt>
+	    <dd class="blacklight-lc_callnum_display">CT275.P648 A33</dd>
+	    <dt class="blacklight-isbn_t">ISBN:</dt>
+	    <dd class="blacklight-isbn_t">0688002307</dd>
+</dl>
+
+
+  </div>
+</div>
+
+
+
+
+</div>
+
+<div id="sidebar" class="col-md-3">
+   <div class="panel panel-default show-tools">
+  <div class="panel-heading">
+    Tools
+  </div>
+
+  <div class="panel-body">
+  <ul class="nav">
+      <li>
+        <div class="documentFunctions">
+      <form accept-charset="UTF-8" action="/find/bookmarks/b1815113" class="bookmark_toggle" data-absent="Bookmark" data-doc-id="b1815113" data-inprogress="Saving..." data-present="In Bookmarks" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="put" /><input name="authenticity_token" type="hidden" value="dft5Bs//pALDUZMbUgnUcqBAcjisLWM/GWBJjd9IEQA=" /></div>
+        <input class="bookmark_add" id="bookmark_toggle_b1815113" name="commit" type="submit" value="Bookmark" />
+</form>
+</div>
+      </li>
+      <li class="email">
+      <a data-ajax-modal="trigger" href="/find/catalog/email?id=b1815113" id="emailLink">Email</a>
+      </li>
+      <li class="sms">
+      <a data-ajax-modal="trigger" href="/find/catalog/sms?id=b1815113" id="smsLink">SMS This</a>
+      </li>
+
+  </ul>
+  </div>
+</div>
+
+
+
+</div>
+
+    </div>
+  </div>
+
+
+  </body>
+</html>

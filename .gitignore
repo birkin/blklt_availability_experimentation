@@ -1,0 +1,8 @@
+*.pyc
+*httpd.conf
+.DS_Store
+.hg
+.svn
+env
+env*
+
