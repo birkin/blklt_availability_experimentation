@@ -85,8 +85,11 @@
       /* Parses api info.
        * Called by addStatus() */
       var items = json_output.items;
-      alert( JSON.stringify(items) );
-      items.forEach( setAvailability )
+      if ( items.length == 0 ) {
+        item_status = "UKNOWN";
+      } else {
+        items.forEach( setAvailability );
+      }
       return "::: status - " + item_status + " :::";
     }
 
@@ -213,7 +216,7 @@
 	    <dd class="blacklight-lc_callnum_display">CT275.P648 A33</dd>
 	    <dt class="blacklight-isbn_t">ISBN:</dt>
 	    <!-- <dd class="blacklight-isbn_t">0688002307</dd> -->
-      <dd class="blacklight-isbn_t">0939117185</dd>
+      <dd class="blacklight-isbn_t">9781775413691</dd>
 </dl>
 
 
